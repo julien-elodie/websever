@@ -8,13 +8,14 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/default.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_layout.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_nav.css')
-        link(rel='stylesheet', href='/stylesheets/YouTube_main_page.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_main_menu.css')
+        script(type='text/javascript', src='/javascripts/auto_hidden.js')
         title='YouTube'
     body
         .nav
             include YouTube_nav
         .main
-            .main_menu
+            .main_menu#main_menu
                 include YouTube_main_menu
             .main_page
 

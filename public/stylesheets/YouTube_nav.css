@@ -1,0 +1,141 @@
+.nav_container{
+    height: 35px;
+    padding: 7px 2% 8px;
+}
+
+.nav_main{
+    height: 30px;
+    width: 15%;
+    min-width: 100px;
+    margin-top: 3px;
+    float: left;
+}
+
+.nav_menu{
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 3.5%;
+    margin: 0;
+    height: 30px;
+    float: left;
+}
+
+.nav_menu_logo{
+    background: no-repeat url("../images/default.png") -322px -168px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.nav_logo_container{
+    width: 73px;
+    height: 30px;
+    float: left;
+    padding-left: 3.5%;
+}
+
+.nav_logo{
+    background: no-repeat url("../images/default.png") -178px -227px;
+    display: inline-block;
+    width: 73px;
+    height: 30px;
+}
+
+.nav_search{
+    width: 75%;
+    min-width: 500px;
+    height: 30px;
+    padding-top: 2px;
+    float: left;
+}
+
+.nav_input{
+    padding: 0;
+    margin: 0;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 27px;
+    padding-left: 7px;
+    font-size:16px;
+    position: relative;
+    top: -1px;
+}
+
+.nav_search_button{
+    padding: 0;
+    margin: 0;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 6%;
+    height: 29px;
+    position: relative;
+    top: 1px;
+    left: -5px;
+    background-color: #f7f7f7;
+}
+
+.nav_search_button:hover{
+    background-color: #ebebeb;
+}
+
+.nav_search_button_logo{
+    background: no-repeat url("../images/default.png") -694px -43px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 1px;
+    margin-top: 4px;
+}
+
+.nav_else{
+    width: 10%;
+    min-width: 76px;
+    height: 28px;
+    padding: 3px 0;
+    text-align: center;
+    float: left;
+}
+
+.nav_else_container{
+    width: 76px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.nav_upload_a{
+    height: 24px;
+    display: inline-block;
+    padding: 3px 0;
+    margin-right: 3px;
+    float: left;
+}
+
+.nav_login_button_a{
+    height: 28px;
+    display: inline-block;
+    padding: 0;
+    margin-left: 5px;
+    float: left;
+}
+
+.nav_upload{
+    background: no-repeat url("../images/default.png") -106px -28px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.nav_login_button{
+    padding: 0;
+    margin: 0;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    width: 44px;
+    height: 28px;
+    color: #ffffff;
+    background-color: #167ac6;
+    font-size: 11px;
+    font-weight: bold;
+}

@@ -9,7 +9,9 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/YouTube_layout.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_nav.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_main_menu.css')
+        script(type='text/javascript', src='/javascripts/default.js')
         script(type='text/javascript', src='/javascripts/auto_hidden.js')
+        script(type='text/javascript', src='/javascripts/click_hidden.js')
         title='YouTube'
     body
         .nav
@@ -17,6 +19,6 @@ html(lang='en')
         .main
             .main_menu#main_menu
                 include YouTube_main_menu
-            .main_page
+            .main_page#main_page
 
         block content

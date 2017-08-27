@@ -1,5 +1,4 @@
-window.onresize = function () {
-  // 获取窗口宽度
+window.onload = function () {
   if (window.innerWidth) {
     winWidth = window.innerWidth;
   }
@@ -7,7 +6,6 @@ window.onresize = function () {
     winWidth = document.body.clientWidth;
   }
 
-  // 动态隐藏侧边栏
   var main_menu = document.getElementById('main_menu');
   var main_page = document.getElementById('main_page');
 

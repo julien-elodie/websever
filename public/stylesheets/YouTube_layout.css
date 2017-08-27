@@ -5,12 +5,13 @@
 }
 
 .main_menu{
-    width: 16%;
+    width: 220px;
     min-width: 220px;
     display: inline-block;
+    float: left;
 }
 
 .main_page{
-    width: 84%;
     min-width: 800px;
+    float: left;
  }

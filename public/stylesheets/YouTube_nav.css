@@ -15,9 +15,9 @@
     display: inline-block;
     background: none;
     border: none;
-    padding: 3.5%;
-    margin: 0;
-    height: 30px;
+    padding: 0 3.5%;
+    margin: 7px 0;
+    height: 16px;
     float: left;
 }
 

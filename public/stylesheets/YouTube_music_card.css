@@ -14,6 +14,73 @@
     padding: 15px 1.5%;
 }
 
-.music_card_title{
+.music_card_main_title{
 
+}
+
+.music_card_li{
+    float: left;
+    width: 18%;
+    height: 178px;
+    padding: 10px 1%;
+}
+
+.music_card{
+    width: 100%;
+    height: 178px;
+    display: block;
+}
+
+.music_card_img{
+    width: 100%;
+    height: 110px;
+    /*background-size*/
+}
+
+.music_card_poi{
+    position: relative;
+    top: 85px;
+}
+
+.music_card_poi_logo{
+    padding: 2px;
+    float: left;
+}
+
+.music_card_poi_text{
+    font-size: 10px;
+    margin: 3px 0;
+    padding: 0 3px;
+    float: left;
+    background: #ffffff;
+    border-radius: 9px 0 0 9px;
+    border: 1px solid #ffffff;
+}
+
+.music_card_info{
+    float: left;
+}
+
+.music_card_title{
+    font-size: 10px;
+    color: #167ac6;
+    font-weight: bold;
+}
+
+.music_card_title:hover{
+    text-decoration: underline;
+}
+
+.music_card_auther{
+    font-size: 10px;
+    color: #167ac6;
+}
+
+.music_card_auther:hover{
+    text-decoration: underline;
+}
+
+.music_card_time{
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
 }

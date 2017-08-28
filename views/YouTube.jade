@@ -1,5 +1,16 @@
 extends YouTube_layout
 
 block content
-    .music_card_title='热门音乐视频'
-        
+    .music_card_main_title='热门音乐视频'
+    if datasets
+        each val in datasets
+            li.music_card_li
+                a.music_card(href='#{val.imgurl}')
+                    .music_card_img(style='background:url(#{val.imgurl})')
+                        .music_card_poi
+                            img.music_card_poi_logo(src='/images/location.png')
+                            span.music_card_poi_text=val.poi
+                    .music_card_info
+                        .music_card_title=val.name
+                        .music_card_auther=val.username
+                        .music_card_time=val.date

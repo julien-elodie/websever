@@ -1,0 +1,19 @@
+.main_music_card{
+    width: 90%;
+    height: 256px;
+    background: #ffffff;
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    padding-bottom: 4px;
+    margin: 0;
+}
+
+.music_card_ul{
+    height: 226px;
+    padding: 15px 1.5%;
+}
+
+.music_card_title{
+
+}

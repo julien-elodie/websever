@@ -1,0 +1,129 @@
+.main_music_page{
+    width: 90%;
+    display: inline-block;
+    margin: 0 auto;
+    background: #ffffff;
+    text-align: left;
+}
+
+.main_music_banner_container{
+    height: 288px;
+}
+
+.main_music_img{
+    position: relative;
+    left: 1.5%;
+}
+
+.main_music_banner{
+    background: url("../images/music_bg.jpg");
+    background-size: cover;
+    height: 176px;
+    display: block;
+}
+
+.main_music_nav_title{
+    height: 80px;
+}
+
+.title_container{
+    width: 55px;
+    height: 26px;
+    display: block;
+    padding: 25px 1.5%;
+    float: left;
+}
+
+.title{
+    font-size: 19px;
+}
+
+.title_logo{
+    background: no-repeat url("../images/default.png") -926px -132px;
+    display: inline-block;
+    width: 12px;
+    height: 9px;
+    margin: 2px 0;
+}
+
+.music_subscribe{
+    width: 123px;
+    height: 24px;
+    display: inline-block;
+    border: solid 1px rgba(0, 0, 0, 0.50);
+    border-radius: 2px;
+    padding: 0;
+    margin: 25px 0.5%;
+    float: right;
+}
+
+.music_subscribe_container{
+    width: 58px;
+    height: 24px;
+    display: inline-block;
+    background: #e71a24;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+}
+
+.music_subscribe_logo{
+    background: no-repeat url("../images/default.png") -721px -88px;
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin: 6px 0;
+}
+
+.music_subscribe_text{
+    font-size: 12px;
+    width: 24px;
+    height: 18px;
+    display: inline-block;
+    float: left;
+    margin: 4px 0;
+    padding-left: 6px;
+}
+
+.music_number{
+    font-size: 11px;
+    position: relative;
+    float: right;
+    margin: 4px 2px;
+}
+
+.main_music_nav{
+    height: 32px;
+}
+
+.music_nav_ul{
+    height: 32px;
+    width: 266px;
+    display: inline-block;
+    padding-left: 1.5%;
+}
+
+.music_nav_li{
+    height: 32px;
+    float: left;
+    padding-right: 6%;
+}
+
+.music_nav_li_container{
+    height: 32px;
+    display: inline-block;
+}
+
+.music_nav_text{
+    font-size: 12px;
+    padding: 2px;
+}
+
+.music_nav_block{
+    background-color: #cc181e;
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    position: relative;
+    bottom: 12px;
+}

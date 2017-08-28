@@ -1,17 +1,31 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
 .nav{
     height: 50px;
     min-width: 800px;
     border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+}
+
+.main{
+    width: 100%;
+    display: block;
 }
 
 .main_menu{
-    width: 220px;
+    width: 20%;
     min-width: 220px;
-    display: inline-block;
     float: left;
+    background: #ffffff;
 }
 
 .main_page{
+    width: 80%;
     min-width: 800px;
     float: left;
+    text-align: center;
  }

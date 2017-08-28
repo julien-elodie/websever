@@ -5,10 +5,14 @@ html(lang='en')
         meta(name='viewport',
             content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='icon' href='/favicon.ico' type='image/x-icon')
         link(rel='stylesheet', href='/stylesheets/default.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_layout.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_nav.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_main_menu.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_main_page.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_music_card.css')
+        script(type='text/javascript', src='/javascripts/jquery-3.2.1.min.js')
         script(type='text/javascript', src='/javascripts/default.js')
         script(type='text/javascript', src='/javascripts/auto_hidden.js')
         script(type='text/javascript', src='/javascripts/click_hidden.js')
@@ -16,9 +20,9 @@ html(lang='en')
     body
         .nav
             include YouTube_nav
-        .main
-            .main_menu#main_menu
+        .main#main(style='position: relative')
+            .main_menu#main_menu(style='display:none')
                 include YouTube_main_menu
-            .main_page#main_page
-
-        block content
+            .main_page#main_page(style='width:100%')
+                include YouTube_main_page
+                include YouTube_music_card

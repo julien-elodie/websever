@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    height: 50px;
+    min-width: 800px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+}
+
+.center{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.video_main{
+    width: 80%;
+    min-width: 800px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+.video_main_list{
+    width: 60%;
+    float: left;
+}
+
+.play_more_list{
+    width: 37%;
+    padding: 10px 1%;
+    padding-left: 0.5%;
+    margin: 5px 0.5%;
+    float: left;
+    background: #ffffff;
+}

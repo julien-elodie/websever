@@ -22,7 +22,7 @@ client.connect(function (err) {
     }
     // return result.rows[0];
     router.get('/', function (req, res, next) {
-      res.locals.datasets = result.rows.slice(0,5);
+      res.locals.datasets = result.rows.slice(0,20);
       res.render('YouTube');
     });
   })

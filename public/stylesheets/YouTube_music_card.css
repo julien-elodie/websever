@@ -1,6 +1,6 @@
 .main_music_card{
     width: 90%;
-    height: 256px;
+    /* height: 256px; */
     background: #ffffff;
     display: inline-block;
     text-align: left;
@@ -10,7 +10,7 @@
 }
 
 .music_card_ul{
-    height: 226px;
+    /* height: 226px; */
     padding: 15px 1.5%;
 }
 
@@ -21,25 +21,30 @@
 .music_card_li{
     float: left;
     width: 18%;
-    height: 178px;
+    height: 228px;
     padding: 10px 1%;
 }
 
 .music_card{
     width: 100%;
-    height: 178px;
+    height: 228px;
     display: block;
 }
 
-.music_card_img{
+.music_card_img_container{
     width: 100%;
-    height: 110px;
+    height: 140px;
     /*background-size*/
+}
+
+.music_card_img{
+    width: inherit;
+    height: inherit;
 }
 
 .music_card_poi{
     position: relative;
-    top: 85px;
+    bottom: 30px;
 }
 
 .music_card_poi_logo{
@@ -59,6 +64,8 @@
 
 .music_card_info{
     float: left;
+    position: relative;
+    bottom: 30px;
 }
 
 .music_card_title{

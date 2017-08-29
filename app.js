@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var YouTube = require('./routes/YouTube');
+var videos = require('./routes/videos');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(favicon(__dirname + '/favicon.ico'));
 app.use('/', index);
 app.use('/users', users);
 app.use('/YouTube', YouTube);
+app.use('/videos', videos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

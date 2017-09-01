@@ -60,18 +60,27 @@
     background: #ffffff;
     border-radius: 9px 0 0 9px;
     border: 1px solid #ffffff;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    max-width: 72%;
 }
 
 .music_card_info{
     float: left;
     position: relative;
     bottom: 30px;
+    width: 100%;
 }
 
 .music_card_title{
     font-size: 10px;
     color: #167ac6;
     font-weight: bold;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    max-width: 100%;
 }
 
 .music_card_title:hover{

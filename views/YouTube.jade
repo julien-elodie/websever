@@ -5,7 +5,7 @@ block content
     if datasets
         each val in datasets
             li.music_card_li
-                a.music_card(href='#{val.imgurl}')
+                a.music_card(href='../videos', alt='#{val.id}', type='button', value='submit')
                     // .music_card_img(style='background:url(#{val.imgurl})')
                     .music_card_img_container
                         img.music_card_img(src=val.imgurl)

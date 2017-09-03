@@ -5,7 +5,7 @@
 video{
     width: 98%;
     height: 360px;
-    margin: 1%;
+    margin: 5px 1%;
     margin-bottom: 0;
     background: #000000;
 }
@@ -25,12 +25,22 @@ video{
     font-weight: bold;
     width: auto;
     height: 24px;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    max-width: 100%;
 }
 
 .auther_info{
     width: 98%;
     height: 48px;
     padding: 10px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.auther_info_container{
+    width: 100%;
+    display: inline-block;
 }
 
 .auther_pic{
@@ -40,15 +50,14 @@ video{
 }
 
 .auther_name_container{
+    float: left;
     height: 48px;
 }
 
 .auther_name{
     font-size: 12px;
     font-weight: bold;
-    float: left;
-    padding: 5px;
-    padding-top: 0;
+    padding: 0 5px;
 }
 
 .music_subscribe{
@@ -57,12 +66,8 @@ video{
     display: inline-block;
     border: solid 1px rgba(0, 0, 0, 0.50);
     border-radius: 2px;
+    margin: 4px 5px 0 5px;
     float: left;
-    padding: 0;
-    /*TODO*/
-    position: relative;
-    top: 22px;
-    left: -30px;
 }
 
 .music_subscribe_container{
@@ -103,8 +108,7 @@ video{
     font-size: 18px;
     color: rgba(0, 0, 0, 0.5);
     float: right;
-    position: relative;
-    top: -23px;
+    padding-top: 30px;
 }
 
 .music_subscribe_block{
@@ -118,8 +122,4 @@ video{
     padding: 2%;
     margin: 0 1%;
     background-color: #ffffff;
-}
-
-.comment_container{
-
 }

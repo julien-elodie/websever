@@ -41,4 +41,5 @@ body{
     margin-top: 50px;
     padding-left: 18%;
     background: #ffffff;
+    min-width: 800px;
 }

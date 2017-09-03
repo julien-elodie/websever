@@ -27,20 +27,16 @@ client.connect(function (err) {
     });
 
     router.get('/li', function (req, res, next) {
-      if (req.query.page) {
+      if (req.query.page <= result.rows.length/5) {
         var page = req.query.page;
-        // res.send(page);
-        res.locals.datasets = result.rows.slice(5*(page-1), 5*page);
-        res.('YouTube_music_card_li')
+        res.send(result.rows.slice(5*(page-1), 5*page));
+        // res.locals.datasets = result.rows.slice(5*(page-1), 5*page);
+        // res.render('YouTube_music_card_li')
+      } else {
+        res.send(null);
       }
     })
   })
 });
 
-/* Get YouTube's html */
-/*
-router.get('/', function (req, res, next) {
-  res.render('YouTube');
-});
-*/
 module.exports = router;

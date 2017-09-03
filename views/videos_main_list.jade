@@ -1,0 +1,18 @@
+.video_container
+    video(src='#{videourl}', controls='controls')
+    .video_auther_info
+        .video_name=name
+        .auther_info
+            .auther_info_container
+                img.auther_pic(src='#{userimgurl}')
+                .auther_name_container
+                    .auther_name=username
+                    .music_subscribe
+                        button.music_subscribe_container
+                            span.music_subscribe_logo
+                            span.music_subscribe_text='订阅'
+                        span.music_number='100万'
+                .music_subscribe_times
+                    span='123,456,789次观看'
+                    .music_subscribe_block
+    .video_info=intro

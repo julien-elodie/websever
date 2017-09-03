@@ -3,34 +3,17 @@ extends videos_layout
 block content
     .video_main
         .video_main_list
-            .video_container
-                video(src='#{videourl}', controls='controls')
-                .video_auther_info
-                    .video_name=name
-                    .auther_info
-                        img.auther_pic(src='#{userimgurl}')
-                        .auther_name_container
-                            span.auther_name=username
-                            .music_subscribe
-                                button.music_subscribe_container
-                                    span.music_subscribe_logo
-                                    span.music_subscribe_text='订阅'
-                                span.music_number='100万'
-                        .music_subscribe_times
-                            span='123,456,789次观看'
-                            .music_subscribe_block
-                        hr
-                .video_info=intro
+            include videos_main_list
             .comment_container
-
+                .comment_title='评论(100)'
+                .comment_input_container
+                    img.user_img(src='../images/person_pin.png')
+                    textarea.user_comment(placeholder='发表公开评论', onfocus='javascript:comment_focus()', onblur='javascript:comment_blur()')
+                button.comment_commit
+                    .comment_commit_text='发表评论'
         .play_more_list
-            .play_morelist_title
+            .play_more_list_title='接下来播放'
             ul.play_more_ul
-                li.play_more_li
-                    a.play_more(href='#')
-                        img.play_more_img(src='')
-                        .play_more_info
-                            .play_more_title=''
-                            .play_more_auther=''
-                            .play_more_time=''
-                    hr
+                .play_more_ul_container#play_more_ul_container
+                .view_more
+                    a.view_more_text#view_more_text(href='javascript:;', page=1, onclick='javascript:click_more()')='加载更多'

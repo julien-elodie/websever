@@ -40,4 +40,5 @@ body{
 .bottom{
     margin-top: 50px;
     background: #ffffff;
+    min-width: 800px;
 }

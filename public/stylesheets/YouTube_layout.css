@@ -9,11 +9,16 @@ body{
     min-width: 800px;
     border-bottom: solid 1px rgba(0, 0, 0, 0.5);
     background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
 }
 
-.main{
+.main {
     width: 100%;
-    display: block;
+    display: inline-block;
 }
 
 .main_menu{
@@ -21,6 +26,7 @@ body{
     min-width: 220px;
     float: left;
     background: #ffffff;
+    padding-top: 50px;
 }
 
 .main_page{
@@ -28,4 +34,11 @@ body{
     min-width: 800px;
     float: left;
     text-align: center;
- }
+    padding-top: 40px;
+}
+
+.bottom{
+    margin-top: 50px;
+    padding-left: 18%;
+    background: #ffffff;
+}

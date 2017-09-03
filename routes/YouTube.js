@@ -22,9 +22,18 @@ client.connect(function (err) {
     }
     // return result.rows[0];
     router.get('/', function (req, res, next) {
-      res.locals.datasets = result.rows.slice(0,20);
+      res.locals.datasets = result.rows.slice(0,5);
       res.render('YouTube');
     });
+
+    router.get('/li', function (req, res, next) {
+      if (req.query.page) {
+        var page = req.query.page;
+        // res.send(page);
+        res.locals.datasets = result.rows.slice(5*(page-1), 5*page);
+        res.('YouTube_music_card_li')
+      }
+    })
   })
 });
 

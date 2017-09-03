@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .nav{
@@ -12,7 +13,6 @@ body{
 
 .center{
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .video_main{
@@ -34,5 +34,10 @@ body{
     padding-left: 0.5%;
     margin: 5px 0.5%;
     float: left;
+    background: #ffffff;
+}
+
+.bottom{
+    margin-top: 50px;
     background: #ffffff;
 }

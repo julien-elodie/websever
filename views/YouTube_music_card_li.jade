@@ -1,0 +1,13 @@
+each val in datasets
+    li.music_card_li
+        // a.music_card(href='../videos?id=#{val.id}')
+        a.music_card#music_card(href='javascript:;', onclick='javascript:post(#{val.id})')
+            .music_card_img_container
+                img.music_card_img(src=val.imgurl)
+                .music_card_poi
+                    img.music_card_poi_logo(src='/images/location.png')
+                    span.music_card_poi_text=val.poi
+            .music_card_info
+                .music_card_title=val.name
+                .music_card_auther=val.username
+                .music_card_time=val.date

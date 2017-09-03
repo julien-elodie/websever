@@ -10,9 +10,12 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/videos_layout.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_nav.css')
         link(rel='stylesheet', href='/stylesheets/videos_main_list.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_bottom.css')
         title='videos'
     body
         .nav
             include YouTube_nav
         .center
             block content
+        .bottom
+            include YouTube_bottom

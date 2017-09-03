@@ -12,18 +12,22 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/YouTube_main_menu.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_main_page.css')
         link(rel='stylesheet', href='/stylesheets/YouTube_music_card.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_bottom.css')
         script(type='text/javascript', src='/javascripts/jquery-3.2.1.min.js')
         script(type='text/javascript', src='/javascripts/default.js')
         script(type='text/javascript', src='/javascripts/auto_hidden.js')
         script(type='text/javascript', src='/javascripts/click_hidden.js')
-        script(type='text/javascript', src='/javascripts/click_visit.js')
+        script(type='text/javascript', src='/javascripts/form_post.js')
         title='YouTube'
     body
         .nav
             include YouTube_nav
-        .main#main(style='position: relative')
-            .main_menu#main_menu(style='display:none')
-                include YouTube_main_menu
-            .main_page#main_page(style='width:100%')
-                include YouTube_main_page
-                include YouTube_music_card
+        .main
+            .main_container#main(style='position: relative')
+                .main_menu#main_menu(style='display:none')
+                    include YouTube_main_menu
+                .main_page#main_page(style='width:100%')
+                    include YouTube_main_page
+                    include YouTube_music_card
+        .bottom
+            include YouTube_bottom

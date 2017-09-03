@@ -1,0 +1,31 @@
+.comment_container
+    .comment_title='评论(100)'
+    .comment_input_container
+        img.user_img(src='../images/person_pin.png')
+        textarea.user_comment(placeholder='发表公开评论', onfocus='javascript:comment_focus()', onblur='javascript:comment_blur()')
+    button.comment_commit
+        .comment_commit_text='发表评论'
+    .comment_list_container
+        ul.comment_list_ul
+            li.comment_list_li
+                .other_user_comment_main_container
+                    .other_user_img_container
+                        img.other_user_img(src='../images/person_pin.png')
+                    .other_user_comment_container
+                        .comment_info_container
+                            a.username(href='#')='用户名'
+                            .comment_date='1小时前'
+                        .comment_info='评论暂时'
+                        .comment_likes_container
+                            .comment_likes_text='赞同'
+                            a.comment_likes_number(href='#')='(88)'
+                            img.comment_likes(src='../images/person_pin.png')
+                            img.comment_dislikes(src='../images/person_pin.png')
+                        .reply_container
+                            ul.reply_ul
+                            a.view_reply(href='#')='查看回复'
+            li.comment_list_li
+                .other_user_comment_main_container
+                    .other_user_img_container
+                        img.other_user_img(src='../images/person_pin.png')
+                    .other_user_comment_container='评论暂时'

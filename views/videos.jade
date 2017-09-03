@@ -4,13 +4,7 @@ block content
     .video_main
         .video_main_list
             include videos_main_list
-            .comment_container
-                .comment_title='评论(100)'
-                .comment_input_container
-                    img.user_img(src='../images/person_pin.png')
-                    textarea.user_comment(placeholder='发表公开评论', onfocus='javascript:comment_focus()', onblur='javascript:comment_blur()')
-                button.comment_commit
-                    .comment_commit_text='发表评论'
+            include videos_comment
         .play_more_list
             .play_more_list_title='接下来播放'
             ul.play_more_ul

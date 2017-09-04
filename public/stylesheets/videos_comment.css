@@ -38,7 +38,7 @@
 }
 
 .comment_list_container{
-
+    padding-top: 10px;
 }
 
 .comment_list_ul{
@@ -65,7 +65,7 @@
 }
 
 .other_user_comment_container{
-    border-left: 1px solid #000000;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
     padding: 0 5px;
     float: left;
 }
@@ -76,14 +76,17 @@
 }
 
 .username{
-    font-size: 11px;
-    color: #167ac6;
     float: left;
 }
 
 .username:hover{
     color: #167ac6;
     text-decoration: underline;
+}
+
+.username_text{
+    font-size: 11px;
+    color: #167ac6;
 }
 
 .comment_date{
@@ -101,8 +104,13 @@
     height: 20px;
 }
 
-.comment_likes_text, .comment_likes_number{
+.comment_reply_text{
     font-size: 11px;
+    float: left;
+    padding: 2px 2px 1px 0;
+}
+
+.comment_likes_number{
     float: left;
     padding: 2px 2px 1px 0;
 }
@@ -110,6 +118,11 @@
 .comment_likes_number:hover{
     color: #167ac6;
     text-decoration: underline;
+}
+
+.comment_likes_number_text{
+    font-size: 11px;
+    color: #167ac6;
 }
 
 .comment_likes, .comment_dislikes{
@@ -128,6 +141,48 @@
 
 }
 
-.view_reply{
+.reply_li{
+
+}
+
+.other_user_reply_container{
+
+}
+
+.reply_username_container{
+    display: inline-block;
+    float: left;
+}
+
+.username_text_colon{
     font-size: 11px;
+    float: left;
+    padding: 0 2px;
+}
+
+.reply_text_container{
+    float: left;
+}
+
+.reply_text{
+    font-size: 12px;
+}
+
+.reply_date{
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.view_reply {
+    display: inline-block;
+}
+
+.view_reply:hover{
+    color: #167ac6;
+    text-decoration: underline;
+}
+
+.view_reply_text{
+    font-size: 11px;
+    color: #167ac6;
 }

@@ -5,6 +5,13 @@ $(document).ready(function () {
   user_comment.css('width', String(comment_input_container.width() - user_img.width() - 5) + 'px');
 });
 
+$(window).resize(function () {
+  var comment_input_container = $('.comment_input_container');
+  var user_img = $('.user_img');
+  var user_comment = $('.user_comment');
+  user_comment.css('width', String(comment_input_container.width() - user_img.width() - 5) + 'px');
+});
+
 function comment_focus() {
   var user_img = $('.user_img');
   var user_comment = $('.user_comment');

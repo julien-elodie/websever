@@ -27,14 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
-/*
-// 设置请求头
-app.use("*", function (req, res, next) {
-  res.writeHead(200, {"Content-Type": "application/json;charset=utf-8"});
-  next();
-});
-*/
-
 app.use('/', index);
 app.use('/users', users);
 app.use('/YouTube', YouTube);

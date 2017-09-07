@@ -1,8 +1,8 @@
-.video_container{
+.video_container {
     width: 100%;
 }
 
-video{
+video {
     width: 98%;
     height: 360px;
     margin: 5px 1%;
@@ -10,7 +10,7 @@ video{
     background: #000000;
 }
 
-.video_auther_info{
+.video_auther_info {
     width: 94%;
     height: 130px;
     padding: 10px 2%;
@@ -20,60 +20,60 @@ video{
     background-color: #ffffff;
 }
 
-.video_name{
+.video_name {
     font-size: 18px;
     font-weight: bold;
     width: auto;
     height: 24px;
     text-overflow: ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
+    overflow: hidden;
+    white-space: nowrap;
     max-width: 100%;
 }
 
-.auther_info{
+.auther_info {
     width: 98%;
     height: 48px;
     padding: 10px 0;
     border-bottom: 1px solid #000000;
 }
 
-.auther_info_container{
+.auther_info_container {
     width: 100%;
     display: inline-block;
 }
 
-.auther_pic{
+.auther_pic {
     width: 48px;
     height: 48px;
     float: left;
 }
 
-.auther_name_container{
+.auther_name_container {
     float: left;
     height: 48px;
 }
 
-.auther_name{
+.auther_name {
     font-size: 12px;
     font-weight: bold;
     padding: 0 5px;
 }
 
-.music_subscribe{
+.music_subscribe {
     width: 90px;
     height: 24px;
-    display: inline-block;
+    /*display: inline-block;*/
     border: solid 1px rgba(0, 0, 0, 0.50);
     border-radius: 2px;
     margin: 4px 5px 0 5px;
     float: left;
 }
 
-.music_subscribe_container{
+.music_subscribe_container {
     width: 54px;
     height: 24px;
-    display: inline-block;
+    /*display: inline-block;*/
     background: #e71a24;
     color: #ffffff;
     border: none;
@@ -81,7 +81,7 @@ video{
     float: left;
 }
 
-.music_subscribe_logo{
+.music_subscribe_logo {
     background: no-repeat url("../images/default.png") -721px -88px;
     display: inline-block;
     width: 16px;
@@ -89,34 +89,34 @@ video{
     margin: 6px 3px;
 }
 
-.music_subscribe_text{
+.music_subscribe_text {
     font-size: 12px;
     width: 24px;
     height: 18px;
-    display: inline-block;
+    /*display: inline-block;*/
     float: left;
     margin: 4px 1px 2px 3px;
 }
 
-.music_number{
+.music_number {
     font-size: 11px;
     float: left;
     margin: 4px 2px 4px 3px;
 }
 
-.music_subscribe_times{
+.music_subscribe_times {
     font-size: 18px;
     color: rgba(0, 0, 0, 0.5);
     float: right;
     padding-top: 30px;
 }
 
-.music_subscribe_block{
+.music_subscribe_block {
     height: 2px;
     background-color: #167ac6;
 }
 
-.video_info{
+.video_info {
     width: 94%;
     min-height: 90px;
     padding: 2%;

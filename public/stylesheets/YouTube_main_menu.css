@@ -1,30 +1,31 @@
-.main_menu_container{
+.main_menu_container {
     padding: 13px 10%;
     border: solid 1px rgba(0, 0, 0, 0.5);
     margin: -1px;
 }
 
-.main_menu_ul{
 
-}
+/*
+.main_menu_ul{}
+*/
 
-.main_menu_li{
+.main_menu_li {
     padding-top: 1px;
     padding-bottom: 1px;
 }
 
-.main_menu_a{
+.main_menu_a {
     width: 100%;
     height: 26px;
     display: block;
 }
 
-.main_menu_a:hover{
+.main_menu_a:hover {
     color: #ffffff;
     background-color: #222222;
 }
 
-.main_menu_logo{
+.main_menu_logo {
     width: 20px;
     height: 20px;
     margin: 2px;
@@ -32,57 +33,57 @@
     float: left;
 }
 
-.main_menu_text{
+.main_menu_text {
     font-size: 13px;
     margin: 1px 0 2px 7px;
     float: left;
 }
 
-.main_menu_home{
+.main_menu_home {
     background: no-repeat url("../images/default.png") -82px 0;
     display: inline-block;
 }
 
-.main_menu_pop{
+.main_menu_pop {
     background: no-repeat url("../images/default.png") -563px -232px;
     display: inline-block;
 }
 
-.main_menu_history{
+.main_menu_history {
     background: no-repeat url("../images/default.png") -378px -50px;
     display: inline-block;
 }
 
-.main_text_highlight{
+.main_text_highlight {
     padding: 2px;
     font-size: 11px;
     font-weight: bold;
     color: #cc181e;
 }
 
-.main_img{
+.main_img {
     width: 20px;
     height: 20px;
     padding-top: 1px;
 }
 
-.main_menu_add{
+.main_menu_add {
     background: no-repeat url("../images/default.png") -699px -126px;
     display: inline-block;
 }
 
-.main_self{
+.main_self {
     font-size: 13px;
 }
 
-.main_a{
-    margin-top:5px;
+.main_a {
+    margin-top: 5px;
     height: 28px;
     width: 44px;
     display: block;
 }
 
-.main_login_button{
+.main_login_button {
     padding: 0;
     margin: 0;
     border: solid 1px rgba(0, 0, 0, 0.5);

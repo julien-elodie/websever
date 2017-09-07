@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport',
+            content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='icon' href='/favicon.ico' type='image/x-icon')
+        link(rel='stylesheet', href='/stylesheets/default.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_nav.css')
+        link(rel='stylesheet', href='/stylesheets/login.css')
+        link(rel='stylesheet', href='/stylesheets/YouTube_bottom.css')
+        script(type='text/javascript', src='/javascripts/jquery-3.2.1.min.js')
+        script(type='text/javascript', src='/javascripts/login_focus.js')
+        title='login'
+    body
+        .nav
+            include YouTube_nav
+        .center
+            .center_container
+                .login_container
+                    .login_title='login:'
+                    form.login(action="" method="")
+                        span.login_username_text='用户名 :'
+                        input.username(type="text" name="username" placeholder="用户名" onfocus='javascript:login_username_focus()' onblur='javascript:login_username_blur()')
+                        span.login_password_text='密码 :'
+                        input.password(type="password" name="password" placeholder="密码" onfocus='javascript:login_password_focus()' onblur='javascript:login_password_blur()')
+                        input.submit(type="submit" value="Login")
+        .bottom
+            include YouTube_bottom

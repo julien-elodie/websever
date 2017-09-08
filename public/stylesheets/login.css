@@ -30,12 +30,31 @@ body {
     height: 320px;
     margin: 40px 0;
     float: right;
+    text-align: center;
+    font-size: 0;
+}
+
+.login_center {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.login_container::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .login_title {
-    font-size: 13px;
-    color: #CC181D;
-    padding: 12px;
+    width: 240px;
+    position: absolute;
+    text-align: center;
+}
+
+.login_img {
+    margin: 0 auto;
 }
 
 .login {
@@ -47,6 +66,7 @@ body {
     display: none;
     padding: 2px 8px;
     font-size: 10px;
+    float: left;
 }
 
 .username {
@@ -84,6 +104,27 @@ body {
 
 .submit:active {
     border: #CC181D solid 2px;
+}
+
+.forget_password {
+    width: 240px;
+    text-align: center;
+}
+
+.forget_password_a {
+    font-size: 10px;
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+}
+
+.forget_password_a:hover {
+    text-decoration: underline;
+    color: #167ac6;
+}
+
+.forget_password_div {
+    color: #167ac6;
 }
 
 .bottom {

@@ -19,12 +19,18 @@ html(lang='en')
         .center
             .center_container
                 .login_container
-                    .login_title='login:'
-                    form.login(action="" method="")
-                        span.login_username_text='用户名 :'
-                        input.username(type="text" name="username" placeholder="用户名" onfocus='javascript:login_username_focus()' onblur='javascript:login_username_blur()')
-                        span.login_password_text='密码 :'
-                        input.password(type="password" name="password" placeholder="密码" onfocus='javascript:login_password_focus()' onblur='javascript:login_password_blur()')
-                        input.submit(type="submit" value="Login")
+                    span.login_title
+                        img.login_img(src="../images/devices.png", alt="")
+                    span.login_center
+                        //.login_title='login :'
+                        form.login(action="" method="")
+                            span.login_username_text='用户名 :'
+                            input.username(type="text" name="username" placeholder="用户名" onfocus='javascript:login_username_focus()' onblur='javascript:login_username_blur()')
+                            span.login_password_text='密码 :'
+                            input.password(type="password" name="password" placeholder="密码" onfocus='javascript:login_password_focus()' onblur='javascript:login_password_blur()')
+                            input.submit(type="submit" value="Login")
+                        span.forget_password
+                            a.forget_password_a(href="#")
+                                .forget_password_div='forget password?'        
         .bottom
             include YouTube_bottom

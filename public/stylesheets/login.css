@@ -69,6 +69,16 @@ body {
     float: left;
 }
 
+
+/*
+.username_hint {
+    display: none;
+    padding: 2px 8px;
+    font-size: 10px;
+    float: left;
+}
+*/
+
 .username {
     width: 200px;
     height: 24px;
@@ -100,6 +110,7 @@ body {
     height: 24px;
     margin: 5px 8px;
     border: #CC181D solid 1px;
+    cursor: pointer;
 }
 
 .submit:active {

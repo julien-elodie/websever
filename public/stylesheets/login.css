@@ -17,7 +17,7 @@ body {
 
 .center_container {
     width: 90%;
-    height: 400px;
+    height: 440px;
     text-align: left;
     margin: 10px auto;
 }
@@ -27,7 +27,7 @@ body {
     border: 2px solid #CC181D;
     width: 240px;
     min-width: 240px;
-    height: 320px;
+    height: 356px;
     margin: 40px 0;
     float: right;
     text-align: center;
@@ -69,15 +69,19 @@ body {
     float: left;
 }
 
+.username_hint_container,
+.password_hint_container {
+    width: 216px;
+    padding: 2px 0;
+    margin: 0 8px;
+    display: inline-block;
+}
 
-/*
-.username_hint {
-    display: none;
-    padding: 2px 8px;
+.username_hint,
+.password_hint {
     font-size: 10px;
     float: left;
 }
-*/
 
 .username {
     width: 200px;
@@ -86,6 +90,7 @@ body {
     border: none #ffffff;
     border-bottom: #CC181D solid 1px;
     background: transparent;
+    float: left;
 }
 
 .username:focus {
@@ -99,6 +104,7 @@ body {
     border: none #ffffff;
     border-bottom: #CC181D solid 1px;
     background: transparent;
+    float: left;
 }
 
 .password:focus {

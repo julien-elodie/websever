@@ -30,7 +30,33 @@ router.get("/", function(req, res, next) {
 router.post("/", function(req, res, next) {
     var user_info = req.body;
     if (user_info.password) {
-        res.send('OK!');
+        var username = user_info.username;
+        var password = user_info.password;
+        var config = {
+            user: "julien-elodie",
+            database: "videoinfodb",
+            password: "wyq2644756656",
+            port: "5432"
+        };
+
+        var client = new pg.Client(config);
+
+        client.connect(function(err) {
+            if (err) {
+                return console.error("could not connect to postgres", err);
+            }
+
+            client.query(
+                "select * from userinfo where username = '" + String(username) + "' and password = '" + String(password) + "';",
+                function(err, result) {
+                    if (err) {
+                        return console.error("error running query", err);
+                    } else {
+                        res.send(result.rows[0]);
+                    }
+                }
+            );
+        });
     } else if (user_info.username) {
         var username = user_info.username;
         var config = {

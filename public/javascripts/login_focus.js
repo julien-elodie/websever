@@ -22,7 +22,6 @@ function login_password_focus() {
 function login_username_blur() {
     var login_username_text = $(".login_username_text");
     var username = $(".username");
-    var password = $(".password");
 
     var username_hint_container = $(".username_hint_container");
     if (username.val() == "") {
@@ -42,7 +41,7 @@ function login_username_blur() {
             dataType: "json",
             success: function(res) {
                 username_hint_container.html("");
-                password.attr("alt", res.password);
+                // password.attr("alt", res.password);
             },
             error: function(res) {
                 username_hint_container.html(
@@ -56,6 +55,7 @@ function login_username_blur() {
 
 function login_password_blur() {
     var login_password_text = $(".login_password_text");
+    var username = $(".username");
     var password = $(".password");
 
     var password_hint_container = $(".password_hint_container");
@@ -64,11 +64,28 @@ function login_password_blur() {
     } else if (!password.val()) {
         login_password_text.css("display", "none");
         password.attr("placeholder", "密码");
-    } else if (password.val() == password.attr("alt")) {
-        password_hint_container.html("");
     } else {
-        password_hint_container.html(
-            '<div class="username_hint" color="red">密码错误!</div>'
-        );
+        username_input = username.val();
+        password_input = password.val();
+        data = {
+            username: username_input,
+            password: password_input
+        };
+        options = {
+            type: "post",
+            url: "../Youtube",
+            data: data,
+            dataType: "json",
+            success: function(res) {
+                password_hint_container.html("");
+                // password.attr("alt", res.password);
+            },
+            error: function(res) {
+                password_hint_container.html(
+                    '<div class="username_hint" color="red">密码错误!</div>'
+                );
+            }
+        };
+        $.ajax(options);
     }
 }

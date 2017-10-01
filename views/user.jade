@@ -12,7 +12,9 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/YouTube_bottom.css')
         script(type='text/javascript', src='/javascripts/jquery-3.2.1.min.js')
         script(type='text/javascript', src='/javascripts/login_focus.js')
-        script(type='text/javascript', src='/javascripts/login_submit.js')
+        // script(type='text/javascript', src='/javascripts/login_submit.js')
+        script(type='text/javascript', src='/javascripts/gt.js')
+        script(type='text/javascript', src='/javascripts/validation.js')
         title='login'
     body
         .nav
@@ -32,8 +34,10 @@ html(lang='en')
                             span.login_password_text='密码 :'
                             input.password(type="password" name="password" placeholder="密码" onfocus='javascript:login_password_focus()' onblur='javascript:login_password_blur()')
                             span.password_hint_container
-                                //.password_hint='密码错误!'
-                            input.submit(type="submit" value="Login" onclick='javascript:login_submit()')
+                                //.password_hint='密码错误!'                        
+                            // input.submit(type="submit" value="Login" onclick='javascript:login_submit()')
+                            #submit.submit
+                                .submit_text='Login'
                         span.forget_password
                             a.forget_password_a(href="#")
                                 .forget_password_div='forget password?'        

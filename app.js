@@ -34,7 +34,7 @@ app.use(session({
         maxAge: 60*1000,
     },
     resave: true,
-    saveUninitialized: false
+    saveUninitialized: true,
 }));
 // app.use(flash())
 

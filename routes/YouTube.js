@@ -3,117 +3,140 @@ var pg = require("pg");
 var router = express.Router();
 
 router.get("/", function(req, res, next) {
+  if (req.session.user) {
+    var user = req.session.user;
+    console.log('User '+ user.username +' login!');
     /*congfig*/
     var config = {
-        user: "julien-elodie",
-        database: "videoinfodb",
-        password: "wyq2644756656",
-        port: "5432"
+      user: "julien-elodie",
+      database: "videoinfodb",
+      password: "wyq2644756656",
+      port: "5432"
     };
 
     var client = new pg.Client(config);
 
     client.connect(function(err) {
+      if (err) {
+        return console.error("could not connect to postgres", err);
+      }
+      client.query("select * from videobaseinfo;", function(err, result) {
         if (err) {
-            return console.error("could not connect to postgres", err);
+          return console.error("error running query", err);
         }
-        client.query("select * from videobaseinfo;", function(err, result) {
-            if (err) {
-                return console.error("error running query", err);
-            }
-            res.locals.datasets = result.rows.slice(0, 5);
-            res.render("YouTube");
-        });
+        res.locals.datasets = result.rows.slice(0, 5);
+        res.render("YouTube");
+      });
     });
+  } else {
+    res.set('refresh', '2;url=../users');
+    res.send('please login first!');
+    /*
+    setTimeout(function() {
+        res.redirect(302, '../users');
+    }, 1000*2);
+    */
+  }
+  /* cookies
+    if (req.signedCookies.username) {
+        console.log("hello" + req.signedCookies.username)
+    } else {
+        res.cookie("username", "123", {signed: true})
+    }
+    */
 });
 
 router.post("/", function(req, res, next) {
-    var user_info = req.body;
-    if (user_info.password) {
-        var username = user_info.username;
-        var password = user_info.password;
-        var config = {
-            user: "julien-elodie",
-            database: "videoinfodb",
-            password: "wyq2644756656",
-            port: "5432"
-        };
-
-        var client = new pg.Client(config);
-
-        client.connect(function(err) {
-            if (err) {
-                return console.error("could not connect to postgres", err);
-            }
-
-            client.query(
-                "select * from userinfo where username = '" + String(username) + "' and password = '" + String(password) + "';",
-                function(err, result) {
-                    if (err) {
-                        return console.error("error running query", err);
-                    } else {
-                        res.send(result.rows[0]);
-                    }
-                }
-            );
-        });
-    } else if (user_info.username) {
-        var username = user_info.username;
-        var config = {
-            user: "julien-elodie",
-            database: "videoinfodb",
-            password: "wyq2644756656",
-            port: "5432"
-        };
-
-        var client = new pg.Client(config);
-
-        client.connect(function(err) {
-            if (err) {
-                return console.error("could not connect to postgres", err);
-            }
-
-            client.query(
-                "select * from userinfo where username = '" + String(username) + "';",
-                function(err, result) {
-                    if (err) {
-                        return console.error("error running query", err);
-                    } else {
-                        res.send(result.rows[0]);
-                    }
-                }
-            );
-        });
-    }
-});
-
-router.get("/li", function(req, res, next) {
-    /*congfig*/
+  var user_info = req.body;
+  if (user_info.password) {
+    var username = user_info.username;
+    var password = user_info.password;
     var config = {
-        user: "julien-elodie",
-        database: "videoinfodb",
-        password: "wyq2644756656",
-        port: "5432"
+      user: "julien-elodie",
+      database: "videoinfodb",
+      password: "wyq2644756656",
+      port: "5432"
     };
 
     var client = new pg.Client(config);
 
     client.connect(function(err) {
-        if (err) {
-            return console.error("could not connect to postgres", err);
+      if (err) {
+        return console.error("could not connect to postgres", err);
+      }
+
+      client.query(
+        "select * from userinfo where username = '" +
+          String(username) +
+          "' and password = '" +
+          String(password) +
+          "';",
+        function(err, result) {
+          if (err) {
+            return console.error("error running query", err);
+          } else {
+            res.send(result.rows[0]);
+          }
         }
-        client.query("select * from videobaseinfo;", function(err, result) {
-            if (err) {
-                return console.error("error running query", err);
-            }
-            if (req.query.page <= result.rows.length / 5) {
-                var page = req.query.page;
-                res.send(result.rows.slice(5 * (page - 1), 5 * page));
-            } else {
-                res.send(null);
-            }
-        });
+      );
     });
+  } else if (user_info.username) {
+    var username = user_info.username;
+    var config = {
+      user: "julien-elodie",
+      database: "videoinfodb",
+      password: "wyq2644756656",
+      port: "5432"
+    };
+
+    var client = new pg.Client(config);
+
+    client.connect(function(err) {
+      if (err) {
+        return console.error("could not connect to postgres", err);
+      }
+
+      client.query(
+        "select * from userinfo where username = '" + String(username) + "';",
+        function(err, result) {
+          if (err) {
+            return console.error("error running query", err);
+          } else {
+            res.send(result.rows[0]);
+          }
+        }
+      );
+    });
+  }
+});
+
+router.get("/li", function(req, res, next) {
+  /*congfig*/
+  var config = {
+    user: "julien-elodie",
+    database: "videoinfodb",
+    password: "wyq2644756656",
+    port: "5432"
+  };
+
+  var client = new pg.Client(config);
+
+  client.connect(function(err) {
+    if (err) {
+      return console.error("could not connect to postgres", err);
+    }
+    client.query("select * from videobaseinfo;", function(err, result) {
+      if (err) {
+        return console.error("error running query", err);
+      }
+      if (req.query.page <= result.rows.length / 5) {
+        var page = req.query.page;
+        res.send(result.rows.slice(5 * (page - 1), 5 * page));
+      } else {
+        res.send(null);
+      }
+    });
+  });
 });
 
 module.exports = router;

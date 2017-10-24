@@ -21,6 +21,19 @@ var handler = function(captchaObj) {;
             success: function(data) {
                 if (data.status === 'success') {
                     alert('登录成功');
+                    var form = document.createElement('form');
+                    form.id = 'form';
+                    form.name = 'form';
+                    document.body.appendChild(form);
+                    var input = document.createElement('input');
+                    input.type = 'text';
+                    input.name = 'username';
+                    input.value = $('.username').val();
+                    form.appendChild(input);
+                    form.method = 'get';
+                    form.action = '../youtube';
+                    form.submit();
+                    document.body.removeChild(form);
                 } else if (data.status === 'fail') {
                     alert('登录失败，请完成验证');
                     captchaObj.reset();
@@ -29,7 +42,11 @@ var handler = function(captchaObj) {;
         });
     });
     $('.submit').click(function() {
-        captchaObj.verify();
+        var password = $(".password");
+        var password_hint_container = $(".password_hint_container");
+        if (password.val() != "" && password_hint_container.html() == "") {
+            captchaObj.verify();   
+        }
     });
 };
 

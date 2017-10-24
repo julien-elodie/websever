@@ -3,7 +3,7 @@ var slide = require('./slide');
 var router = express.Router();
 
 router.get("/", function(req, res, next) {
-    res.render('user')
+    res.render('user');
 });
 /* GET users listing. */
 router.get("/validate", function(req, res, next) {
@@ -46,7 +46,11 @@ router.post("/validate", function(req, res) {
                 info: '登录失败'
             });
         } else {
-
+            
+            var user = {
+                username:req.body.username,
+            }
+            req.session.user = user;
             res.send({
                 status: "success",
                 info: '登录成功'
